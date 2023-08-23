@@ -6,9 +6,6 @@ var promptcriteria = document.querySelectorAll(".card-popoutlabel");
 
 // When we click on the popout label, we toggle the previous element's heigh and padding
 function clickaccordion(event) {
-  //console.log(event.target.attributes);
-  console.log(event.target.previousElementSibling);
-  console.log(event.target.previousElementSibling.style.getPropertyValue("height"));
   if (event.target.previousElementSibling.style.getPropertyValue("height")=="auto") {
     event.target.previousElementSibling.style = "height:0; padding-top:0px; padding-bottom:0px;";
   } else {
@@ -17,7 +14,7 @@ function clickaccordion(event) {
 }
 
 // Add an event listener when the buttons are clicked
-promptcriteria.forEach( function(i) { i.addEventListener("click", clickaccordion); console.log(i);} );
+promptcriteria.forEach( function(i) { i.addEventListener("click", clickaccordion); } );
 
 // --------------------------------
 // Password character type criteria
