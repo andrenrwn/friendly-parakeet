@@ -21,8 +21,20 @@ This example application fulfills the following requiremets:
   - special characters
 - Ensures that users select at least one character type
 
+### User interface considerations
+
 The user interface approach minimizes user clicks by supplying default values, so users can immediately generate a password with minimal clicks.
 The accordion is implemented to fulfill the requiement to prompt the user while keeping the interface as simple as possible, without the user needing to apply additional clicks if they do not wish to change the default values.
+
+According to Nick Babich's blog, a dialog box is *interruptive*, therefore it is something is good to minimize as much as possbile.
+https://uxplanet.org/5-essential-ux-rules-for-dialog-design-4de258c22116
+
+All these functions create interruptive dialog boxes, so we will only use alert() in one place on this application:
+alert()
+prompt()
+confirm()
+
+Instead of using prompt(), this application uses accordion buttons to maintain the user's freedom while prompting them on the screen directly at the same time, fulfilling the acceptance criteria of this application.
 
 ## Submission
 
