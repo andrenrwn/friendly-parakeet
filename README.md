@@ -1,20 +1,34 @@
-# Password Generator Starter Code
+# Password Generator
 
-This showcases a javascript example to generate random passwords based on a set of user-defined parameters.
+## About
 
-GIVEN I need a new, secure password
+This webpage showcases how JavaScript can be used to produce interactive user interface elements.
 
-- WHEN I click the button to generate a password
-  THEN I am presented with a series of prompts for password criteria
-- WHEN prompted for password criteria
-  THEN I select which criteria to include in the password
-- WHEN prompted for the length of the password
-  THEN I choose a length of at least 8 characters and no more than 128 characters
-- WHEN asked for character types to include in the password
-  THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
-- WHEN I answer each prompt
-  THEN my input should be validated and at least one character type should be selected
-- WHEN all prompts are answered
-  THEN a password is generated that matches the selected criteria
-- WHEN the password is generated
-  THEN the password is either displayed in an alert or written to the page
+On a web browser, javascript:
+- uses the DOM API to control HTML elements
+- gets callbacks on user interface events using event listeners
+- manipulates attributes, styles, and properties of the webpage elements using selectors and document object methods
+
+This example application fulfills the following requiremets:
+- Generate random passwords following a set of user-defined parameters
+- Prompts the user for password criteria using accordion buttons to present further options
+- Allows the user to specify a length from 8 to 128 characters
+- Ensures user input are validated
+- Allows the user to select four character types:
+  - lowercase
+  - uppercase
+  - numeric
+  - special characters
+- Ensures that users select at least one character type
+
+The user interface approach minimizes user clicks by supplying default values, so users can immediately generate a password with minimal clicks.
+The accordion is implemented to fulfill the requiement to prompt the user while keeping the interface as simple as possible, without the user needing to apply additional clicks if they do not wish to change the default values.
+
+## Submission
+
+Repository: https://github.com/andrenrwn/friendly-parakeet
+
+Webpage: https://andrenrwn.github.io/friendly-parakeet/Develop/
+
+Screenshot:
+![Image of password generator application](/screenshot.png "Screenshot of password generator app").
