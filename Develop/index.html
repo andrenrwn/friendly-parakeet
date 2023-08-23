@@ -24,7 +24,7 @@
             aria-label="Generated Password"
           ></textarea>
 
-          <div class="card-popout">
+          <div class="card-popout" id="criteria-chartype">
             <input type="checkbox" id="uppercase" name="uppercase" checked />
             <label for="uppercase"> Uppercase characters</label><br>
             <input type="checkbox" id="lowercase" name="lowercase" checked />
@@ -33,12 +33,18 @@
             <label for="numeric"> Numeric characters</label><br>
             <input type="checkbox" id="special" name="special" checked />
             <label for="special"> Special characters</label><br>
-            <div class="slidecontainer">
-              <input type="range" id="pwdlenslider" class="slider" min="8" max="128" value="32" />
-              <label for="pwdlenslider">Password length</label>
-              <input type="number" id="pwdlen" name="pwdlen" min="8" max="128" value="38" />
-            </div>
           </div>
+          <button class="card-popoutlabel" for="criteria-chartype">
+            Specify your criteria for password character type
+          </button>
+          <div class="card-popout" id="criteria-length">
+            <label for="pwdlenslider">Password length</label>
+            <input type="range" id="pwdlenslider" class="slider" min="8" max="128" value="32" />
+            <input type="number" id="pwdlen" name="pwdlen" min="8" max="128" value="38" />
+          </div>
+          <button class="card-popoutlabel" for="criteria-length">
+            Specify your criteria for password length
+          </button>
 
         </div>
         <div class="card-footer">

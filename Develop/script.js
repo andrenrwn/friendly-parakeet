@@ -1,5 +1,27 @@
-// Assignment code here
-var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+// ------------------------
+// Prompt user for criteria
+// ------------------------
+// The user is prompted to enter a criteria by clicking on the card-popoutlabel buttons
+var promptcriteria = document.querySelectorAll(".card-popoutlabel");
+
+// When we click on the popout label, we toggle the previous element's heigh and padding
+function clickaccordion(event) {
+  //console.log(event.target.attributes);
+  console.log(event.target.previousElementSibling);
+  console.log(event.target.previousElementSibling.style.getPropertyValue("height"));
+  if (event.target.previousElementSibling.style.getPropertyValue("height")=="auto") {
+    event.target.previousElementSibling.style = "height:0; padding-top:0px; padding-bottom:0px;";
+  } else {
+    event.target.previousElementSibling.style = "height:auto; padding-top:25px; padding-bottom:25px;";
+  }
+}
+
+// Add an event listener when the buttons are clicked
+promptcriteria.forEach( function(i) { i.addEventListener("click", clickaccordion); console.log(i);} );
+
+// --------------------------------
+// Password character type criteria
+// --------------------------------
 
 const validchars = {
   uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
@@ -8,15 +30,16 @@ const validchars = {
   special: " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
 };
 
-const min_length = 8;
-const max_length = 128;
+const minlength = 8;
+const maxlength = 128;
 
+// options are presented as checkboxes to the user
 var checkboxes = document.querySelectorAll("input[type='checkbox']");
 
 // A function to check if all the checkboxes are unchecked
 function at_least_one_checkbox() {
   var atleastone = false;
-  for ( var i of document.querySelectorAll("input[type='checkbox']") ) {
+  for ( var i of checkboxes ) {
     // console.log(i + " - " + i.checked);
     atleastone = atleastone || i.checked;
   }
@@ -33,19 +56,34 @@ function clickcheckbox(event) {
   }
 }
 
-// Run a fucntion every time each checkbox is clicked
+// Associate an event listener function for every time a checkbox is clicked
 checkboxes.forEach( function(i) { i.addEventListener("click", clickcheckbox); } );
 
+// ------------------------
+// Password length criteria
+// ------------------------
+
 // Add a slider for the user to select the password length
-var slider = document.getElementById("pwdlenslider");
-var pwdlen = document.getElementById("pwdlen");
+var slider = document.getElementById("pwdlenslider"); // slider
+var pwdlen = document.getElementById("pwdlen"); // number input
 
 pwdlen.setAttribute("value", slider.value);
 
-// Update the current slider value (each time you drag the slider handle)
+// Update the current password length (each time you drag the slider handle)
 slider.oninput = function() {
   pwdlen.setAttribute("value", slider.value);
 }
+
+// Update the slider (each time the password input is changed)
+pwdlen.addEventListener("input", function(event) {
+    if (event.target.value < minlength) {
+      event.target.value = minlength;
+    } else if (event.target.value > maxlength) {
+      event.target.value = maxlength;
+    }
+    slider.value=event.target.value;
+  }
+);
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");

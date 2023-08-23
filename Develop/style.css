@@ -54,6 +54,39 @@ header {
   min-height: 100px;
 }
 
+.card-popout {
+  height:0px;
+  padding-top:0px;
+  padding-bottom:0px;
+  padding-left:25px;
+  padding-right:25px;
+  background-color:#f8f8f8;
+  overflow:hidden;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px dashed #c0c7cf;
+  border-right: 1px dashed #c0c7cf;
+  -webkit-transition: .5s;
+  transition: .5s;}
+
+.card-popoutlabel {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width:100%;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color:azure;
+  border-radius: 0px 0px 5px 5px;
+  border-top:none;
+  border-bottom: 1px dashed #c0c7cf;
+  border-left: 1px dashed #c0c7cf;
+  border-right: 1px dashed #c0c7cf;
+  height: 2rem;
+  text-align:left;
+}
+
 .card-footer {
   text-align: center;
 }
