@@ -23,6 +23,23 @@
             placeholder="Your Secure Password"
             aria-label="Generated Password"
           ></textarea>
+
+          <div class="card-popout">
+            <input type="checkbox" id="uppercase" name="uppercase" checked />
+            <label for="uppercase"> Uppercase characters</label><br>
+            <input type="checkbox" id="lowercase" name="lowercase" checked />
+            <label for="lowercase"> Lowercase characters</label><br>
+            <input type="checkbox" id="numeric" name="numeric" checked />
+            <label for="numeric"> Numeric characters</label><br>
+            <input type="checkbox" id="special" name="special" checked />
+            <label for="special"> Special characters</label><br>
+            <div class="slidecontainer">
+              <input type="range" id="pwdlenslider" class="slider" min="8" max="128" value="32" />
+              <label for="pwdlenslider">Password length</label>
+              <input type="number" id="pwdlen" name="pwdlen" min="8" max="128" value="38" />
+            </div>
+          </div>
+
         </div>
         <div class="card-footer">
           <button id="generate" class="btn">Generate Password</button>
