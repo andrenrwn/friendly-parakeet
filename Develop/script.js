@@ -7,9 +7,11 @@ var promptcriteria = document.querySelectorAll(".card-popoutlabel");
 // When we click on the popout label, we toggle the previous element's heigh and padding
 function clickaccordion(event) {
   if (event.target.previousElementSibling.style.getPropertyValue("height")=="auto") {
-    event.target.previousElementSibling.style = "height:0; padding-top:0px; padding-bottom:0px;";
+    event.target.previousElementSibling.style = 
+      "height:0; padding-top:0px; padding-bottom:0px;";
   } else {
-    event.target.previousElementSibling.style = "height:auto; padding-top:25px; padding-bottom:25px;";
+    event.target.previousElementSibling.style = 
+      "height:auto; padding-top:25px; padding-bottom:25px;";
   }
 }
 

@@ -77,7 +77,7 @@ header {
   width:100%;
   padding-left: 25px;
   padding-right: 25px;
-  background-color:azure;
+  background-color: #FFE6E6;
   border-radius: 0px 0px 5px 5px;
   border-top:none;
   border-bottom: 1px dashed #c0c7cf;
@@ -85,6 +85,10 @@ header {
   border-right: 1px dashed #c0c7cf;
   height: 2rem;
   text-align:left;
+}
+
+.card-popoutlabel:hover {
+  background-color: #FFD1D1;
 }
 
 .card-footer {
