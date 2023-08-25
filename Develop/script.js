@@ -29,6 +29,7 @@ const validchars = {
   special: " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
 };
 
+// specify min and max password length
 const minlength = 8;
 const maxlength = 128;
 
@@ -66,11 +67,16 @@ checkboxes.forEach( function(i) { i.addEventListener("click", clickcheckbox); } 
 var slider = document.getElementById("pwdlenslider"); // slider
 var pwdlen = document.getElementById("pwdlen"); // number input
 
-pwdlen.setAttribute("value", slider.value);
+pwdlen.value=slider.value;
 
 // Update the current password length (each time you drag the slider handle)
 slider.oninput = function() {
+  pwdlen.value = slider.value;
+  // console.log("slider ONINPUT - pwdlen.value: " + pwdlen.value + " slider.value: " + slider.value);
   pwdlen.setAttribute("value", slider.value);
+  slider.setAttribute("value", slider.value);
+  // console.log(slider);
+  // console.log(pwdlen);
 }
 
 // Update the slider (each time the password input is changed)
@@ -81,8 +87,19 @@ pwdlen.addEventListener("input", function(event) {
       event.target.value = maxlength;
     }
     slider.value=event.target.value;
+    pwdlen.value=event.target.value;
+    pwdlen.setAttribute("value", event.target.value);
+    slider.setAttribute("value", event.target.value);
+  
+    // console.log("PWDLEN event - pwdlen.value: " + pwdlen.value + " slider.value: " + slider.value);
+    // console.log(slider);
+    // console.log(pwdlen);
   }
 );
+
+// -----------------------
+// Generating the password
+// -----------------------
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -114,7 +131,7 @@ function generatePassword() {
   return passwd;
 }
 
-// Write password to the #password input
+// Write password to the #password input textarea
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
