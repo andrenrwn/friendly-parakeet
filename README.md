@@ -38,9 +38,9 @@ Instead of using prompt(), this application uses accordion buttons to maintain t
 
 ## Submission
 
-Repository: https://github.com/andrenrwn/friendly-parakeet
+Repository: [https://github.com/andrenrwn/friendly-parakeet](https://github.com/andrenrwn/friendly-parakeet)
 
-Webpage: https://andrenrwn.github.io/friendly-parakeet/Develop/
+Webpage: [https://andrenrwn.github.io/friendly-parakeet/Develop/](https://andrenrwn.github.io/friendly-parakeet/Develop/)
 
 Screenshot:
 ![Image of password generator application](/screenshot.png "Screenshot of password generator app").
