@@ -148,7 +148,7 @@ button[disabled] {
   font-size: 1.2rem;
   text-align: center;
   margin-top: 10px;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; /* make it closer to criteria tab below */
   border: 2px dashed #c0c7cf;
   border-radius: 6px;
   resize: none;
