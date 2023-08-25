@@ -44,3 +44,8 @@ Webpage: [https://andrenrwn.github.io/friendly-parakeet/Develop/](https://andren
 
 Screenshot:
 ![Image of password generator application](/screenshot.png "Screenshot of password generator app").
+
+## Credits
+
+Based on the starter code here:
+[https://github.com/coding-boot-camp/friendly-parakeet](https://github.com/coding-boot-camp/friendly-parakeet)
